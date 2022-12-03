@@ -1,0 +1,61 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #000;
+    overflow: hidden;
+    display: grid;
+    justify-content: center;
+}
+
+h1 {
+    position: relative;
+    color: #dc0a0a;
+    font-size: 4em;
+    letter-spacing: 4px;
+    border-bottom: 16px solid rgb(10, 17, 235);
+    line-height: 1.4;
+    font-family: consoles;
+    text-transform: uppercase;
+}
+
+h1::before {
+    content: attr(data-text);
+    position: absolute;
+    color: dodgerblue;
+    border-bottom: 16px solid rgba(238, 240, 242, 0.861);
+    animation: lod 2s linear infinite;
+    overflow: hidden;
+
+}
+
+h2 {
+    position: relative;
+    color: #333;
+    font-size: 4em;
+    letter-spacing: 5px;
+    border-bottom: 16px solid #333;
+    line-height: 1.4;
+    font-family: consoles;
+    text-transform: uppercase;
+}
+
+h2::before {
+    content: attr(data-text);
+    position: absolute;
+    color: rgb(192, 40, 14);
+    border-bottom: 16px solid rgb(9, 223, 12);
+    animation: lod 2s linear infinite;
+    overflow: hidden;
+
+}
+
+@keyframes lod {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
